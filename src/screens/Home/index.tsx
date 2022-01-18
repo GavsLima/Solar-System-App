@@ -2,7 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import Card from '../../components/Card';
-import {IPlanet} from '../../components/Card/types';
+import { IPlanet } from '../../components/Card/types';
 import api from '../../services/api';
 import {Container, ImagePlanet, TouchablePlanet} from './styles';
 
