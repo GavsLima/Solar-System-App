@@ -13,13 +13,13 @@ export const CardView = styled.View`
   background-color: rgba(254, 254, 254, 0.1);
   border-radius: 15px;
   padding: 15px;
-  width: auto;
+  width: 100%;
   min-height: 130px;
 `;
 
 export const ImageCard = styled(SvgUri).attrs({
   width: '30%',
-  height: 'auto',
+  height: '90%',
 })`
   object-fit: contain;
   margin-right: 15px;
