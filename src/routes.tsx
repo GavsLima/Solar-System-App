@@ -23,12 +23,12 @@ const Routes: React.FC = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{title: 'Início'}}
+      
         />
         <Stack.Screen
           name="Details"
           component={PlanetDetails}
-          options={{title: 'Planeta'}}
+          options={{title: 'Details'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
