@@ -50,3 +50,7 @@ export const Divider = styled.View`
   border-color: #3DACDF;
   margin-top: 10px;
 `;
+
+export const LoaderView = styled.View`
+  align-items: center;
+`;
