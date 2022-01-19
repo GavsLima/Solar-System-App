@@ -21,7 +21,7 @@ const Routes: React.FC = () => {
     <NavigationContainer theme={MyTheme}>
       <Stack.Navigator>
         <Stack.Screen
-          name="Home"
+          name="Planetas"
           component={Home}
       
         />
