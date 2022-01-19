@@ -2,14 +2,14 @@ import React from 'react';
 import {
   CardView,
   CenteredView,
-  ImageCard,
+  ImagePlanet,
   InfoText,
   InfoView,
-  LineBlue,
+  Divider,
   TitleText,
   ViewText,
 } from './styles';
-import {IPlanet} from './types';
+import { IPlanet } from '../../types';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {
   faRulerCombined,
@@ -20,10 +20,10 @@ const Card: React.FC<IPlanet> = ({name, image, temperature, size}) => {
   return (
     <CenteredView>
       <CardView>
-        <ImageCard uri={image} />
+        <ImagePlanet uri={image} />
         <ViewText>
           <TitleText>{name}</TitleText>
-          <LineBlue />
+          <Divider />
           <InfoView>
             <InfoText>
               <FontAwesomeIcon

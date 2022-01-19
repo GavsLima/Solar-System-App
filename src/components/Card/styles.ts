@@ -17,9 +17,9 @@ export const CardView = styled.View`
   min-height: 130px;
 `;
 
-export const ImageCard = styled(SvgUri).attrs({
+export const ImagePlanet = styled(SvgUri).attrs({
   width: '30%',
-  height: '90%',
+  height: '100%',
 })`
   object-fit: contain;
   margin-right: 15px;
@@ -50,7 +50,7 @@ export const InfoText = styled.Text`
   padding-left: 5px;
 `;
 
-export const LineBlue = styled.View`
+export const Divider = styled.View`
   border-width: 0.5px;
   border-color: #3DACDF;
   margin-top: 10px;
