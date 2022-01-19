@@ -2,11 +2,15 @@ import {useNavigation} from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import Card from '../../components/Card';
-import {IPlanet} from '../../components/Card/types';
+import { IPlanet } from '../../types';
 import api from '../../service/api'
 import {Container, ImagePlanet, TouchablePlanet} from './styles';
+import { useDispatch } from 'react-redux';
+import { IGlobalPlanetId } from '../../store/modules/PlanetDetails/Types';
+import { setNewPlanetId } from '../../store/modules/PlanetDetails/Actions';
 
 const Home: React.FC = () => {
+  const dispatch = useDispatch()
   const nav = useNavigation();
   const [planet, setPlanet] = useState<IPlanet[]>([]);
 
@@ -19,7 +23,11 @@ const Home: React.FC = () => {
       .catch(e => console.log(e));
   }, []);
 
-  const handle = (screen: any) => {
+  const handlePlanetDetail = (id: string, screen: any) => {
+    const newPlanet: IGlobalPlanetId = {
+      planet_id: id,
+    };
+    dispatch(setNewPlanetId(newPlanet));
     nav.navigate(screen);
   };
 
@@ -30,7 +38,7 @@ const Home: React.FC = () => {
           style={styles.flatlistContainer}
           data={planet}
           renderItem={({item}) => (
-            <TouchablePlanet onPress={() => handle('Details')}>
+            <TouchablePlanet onPress={() => handlePlanetDetail(item.id, 'Details')}>
               <Card
                 id={item.id}
                 name={item.name}
